@@ -50,7 +50,7 @@ const FormikLoginForm = withFormik({
     term: Yup.bool().oneOf([true], "Term must be checked")
   }),
 
-  handleSubmit() {
+  handleSubmit() { // to do when melanie is ready with an endpoint for us 
     console.log("handleSubmit clicked");
     // axiosWithAuth()
     //   .post("", values)

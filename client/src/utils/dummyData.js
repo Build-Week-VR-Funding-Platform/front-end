@@ -19,7 +19,7 @@ const dummyData = [
     },
     {
         id: 3,
-        image:"https://i2.wp.com/sixr.tv/wp-content/uploads/2018/09/SDF-TRUST_2X2_B.png?w=1500&ssl=1",
+        image: "https://i2.wp.com/sixr.tv/wp-content/uploads/2018/09/SDF-TRUST_2X2_B.png?w=1500&ssl=1",
         project_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor sed viverra ipsum nunc aliquet bibendum enim. In massa tempor nec feugiat.",
         project_title: "3rd one is charm",
         project_funding: 777,
@@ -30,5 +30,6 @@ const dummyData = [
 
 
 const colorPalette = ["#011638", "#40367C", "#49C1A7", "#D0CCD0", "#FBFCFF"]
+
 
 export default dummyData;
