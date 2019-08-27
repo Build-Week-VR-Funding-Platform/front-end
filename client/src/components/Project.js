@@ -1,8 +1,8 @@
 import React from "react";
 
 const ProjectDetail = (props) =>{
-    console.log('ProjectDetail props: ', props.projectDetail.id)
-    const id = props.projectDetail.id
+    console.log('ProjectDetail props: ', props.id)
+    const id = props.id
     return(
         <div className="event-card">
             <h2>funding ammount: {id}</h2>
