@@ -18,7 +18,7 @@ const [projects, setProjects] = useState(dummyData);
             <h1>HELLO!</h1>
            <h5>Maps out each "VR Project" in that companys account</h5>
             {projects.map((project, key) => {
-            return <ProjectDetail projectDetail ={project} key = {key} />
+            return <ProjectDetail detail ={project} key = {key} />
             })}
         
         </div>
