@@ -31,5 +31,4 @@ const dummyData = [
 
 const colorPalette = ["#011638", "#40367C", "#49C1A7", "#D0CCD0", "#FBFCFF"]
 
-
 export default dummyData;
