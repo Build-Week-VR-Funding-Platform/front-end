@@ -1,19 +1,23 @@
 import React from "react";
+import { Card, Image, Button } from "semantic-ui-react";
 
 const ProjectDetail = (props) => {
-    console.log('props from projectDetail: ', props)
+    // console.log('props from projectDetail: ', props)
     return(
-        <div className="event-card">
-            <p>id: {props.id}</p>
-            <h2>{props.title}</h2>
-            <h3>funding: ${props.funding}</h3>
-            <h3>assets: ${props.assets}</h3>
-
-            {/* <p>(would be good if we have some images)</p>
-            <p>Location: Seattle</p>
-            <p>Sep 01, 2019 </p> */}
-            <button>Detail</button>
-        </div>
+        <Card>
+            <Card.Header><h2>{props.title}</h2></Card.Header>
+            <Image src={props.image} alt="project-image" />
+            <Card.Content>
+                <Card.Description>
+                    funding: ${props.funding}
+                    <p>assets: ${props.assets}</p>
+                </Card.Description>
+                <Card.Description>
+                    {props.description}
+                </Card.Description>
+            </Card.Content>
+            <Button style={{backgroundColor:'#011638', color: "#FBFCFF"}}>Detail</Button>
+        </Card>
     )
 }
 

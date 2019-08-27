@@ -16,15 +16,27 @@ code {
   text-align: center;
 }
 
-.header {
+.nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: gray;
+  align-items: center;
+  background-color: #D0CCD0;
+  height: 50px;
+  margin: 0 0 20px 0;
+}
+
+.nav p {
+  font-size: 16px;
+  color: black;
 }
 
 li {
   list-style-type: none;
+}
+
+.card-container {
+  margin: 0 auto;
 }
 
 .event-card {
