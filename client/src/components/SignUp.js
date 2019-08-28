@@ -50,15 +50,15 @@ const FormikUserForm = withFormik({
     term: Yup.bool().oneOf([true], "Term must be checked")
   }),
 
-  handleSubmit() {
+  handleSubmit(values) {
     console.log("handleSubmit clicked");
-    // axiosWithAuth()
-    //   .post("", values)
-    //   .then(res => {
-    //     console.log(res)
-    //     // use axios and post user info to backend?
-    //   })
-    //   .catch(err => console.log(err.response));
+    axiosWithAuth()
+      .post("https://vr-funding-app.herokuapp.com/api/auth/reg", values)
+      .then(res => {
+        console.log(res)
+        // use axios and post user info to backend?
+      })
+      .catch(err => console.log(err.response));
   }
 })(SignUp);
 

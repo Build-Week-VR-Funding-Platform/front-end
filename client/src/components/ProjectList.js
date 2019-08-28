@@ -8,6 +8,7 @@ import ProjectDetail from './Project';
 function ProjectList(props){
 const [projects, setProjects] = useState(dummyData);
 
+// load in data from backend 
 
     console.log('props', props.dummyData)
     console.log('projects', projects);
@@ -26,5 +27,6 @@ const [projects, setProjects] = useState(dummyData);
     );
 
 }
+
 
 export default ProjectList;
