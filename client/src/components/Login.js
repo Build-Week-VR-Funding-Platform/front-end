@@ -50,7 +50,7 @@ const FormikLoginForm = withFormik({
       .then(res => {
         console.log("res: " ,res)
         localStorage.setItem('token', res.data.token)
-        // use axios and post user info to backend?
+        // use axios and post user info to backend
       })
       .catch(err => console.log("ERROR: ", err.response));
   }

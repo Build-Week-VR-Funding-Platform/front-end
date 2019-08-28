@@ -7,6 +7,15 @@ import Users from './components/Users';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
 
+
+//we have to set something up to Identify whose logged in and only take care of the ones applicable to that account
+
+// if melanie hasnt already, we will route all trafic through the authenticator axios function, which will only render if its suppoed to.
+
+// sets the response of the Login call to a localstorage value keyed as "token"
+
+// Have melanie work with us to make sure were only seeing the right data for that account.
+
 //secure private routes 
 function App() {
   return (
