@@ -37,6 +37,8 @@ const FormikProjectForm = withFormik({
             .catch(err => {
                 console.log('FormSubmiterr: ', err);
                 setSubmitting(false);
+
+                
             });
         }
     
