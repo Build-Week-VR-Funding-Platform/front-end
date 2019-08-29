@@ -68,8 +68,7 @@ li {
   padding: 20px;
 }
 
-
-.new-project-container {
+.form-container {
   max-width: 500px;
   display: flex;
   flex-direction: column;
@@ -79,10 +78,20 @@ li {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-input {
-  margin-top: 32px;
-  padding: 0.5rem;
+.form-container h2 {
+  padding: 20px;
+}
+
+.form-container p {
+  text-align: left;
   font-size: 16px;
+  color: #011638;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 0.5rem;
+  font-size: 14px;
   width: 100%;
   display: block;
   border-radius: 4px;

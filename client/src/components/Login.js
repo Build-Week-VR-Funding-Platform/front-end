@@ -4,20 +4,22 @@ import { axiosWithAuth } from "../utils/axiosWithAuth";
 import { Form, Field, withFormik } from "formik";
 import * as Yup from "yup";
 
+import { Button } from "semantic-ui-react";
+
 const Login = ({ errors, touched, status, isSubmitting }) => {
   return (
-    <div className="form">
-      <p>Login</p>
+    <div className="form-container">
+      <h2>Login</h2>
       <Form>
+        <p>Username:</p>
         <Field type="text" name="username" placeholder="Username" />
         {touched.name && errors.name && <p className="error">{errors.name}</p>}
-       
+        <p>Password:</p>       
         <Field type="password" name="password" placeholder="Password" />
         {touched.password && errors.password && (
           <p className="error">{errors.password}</p>
         )}
-     
-        <button type="submit">Submit</button>
+        <Button type="submit" style={{backgroundColor: "#011638", color: "white"}}>Submit</Button>
       </Form>
     </div>
   );

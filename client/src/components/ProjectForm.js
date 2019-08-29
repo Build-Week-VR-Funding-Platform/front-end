@@ -22,18 +22,27 @@ function ProjectForm(){
 
     return(
         <div>
-            <Form className="new-project-container">
+            <Form className="form-container">
                 <h2>Create a new project with us</h2>
+                <p>Image for your project</p>
                 <Field type = "text" name="image" placeholder="Image URL" />
-                <Field type = "text" name="project_title" placeholder="Project Title" />
-                <Field type = "text" name="project_type" placeholder="Project Type" />
-                <Field type = "text" name="mission_statement" placeholder="Mission Statement" />
-                <Field type = "text" name="project_description" placeholder="Description" />
-                <Field type = "text" name="funding_amount" placeholder="Funding amount" />
-                <Field type = "text" name="project_timeline" placeholder="Project Timeline" />
-                <Field type = "text" name="project_assets" placeholder="Project assets" />
-                <Field type = "number" name="founders_id" placeholder="Founders ID" />
-                <Button color="blue" content="Submit Project!" />
+                <p>Project Title</p>                
+                <Field type = "text" name="project_title" placeholder="title" />
+                <p>Project Type</p>                
+                <Field type = "text" name="project_type" placeholder="type" />
+                <p>Mission Statement</p>                
+                <Field type = "text" name="mission_statement" placeholder="mission statement" />
+                <p>Project Description</p>                
+                <Field type = "text" name="project_description" placeholder="description" />
+                <p>Funding for Project</p>                
+                <Field type = "text" name="funding_amount" placeholder="funding amount" />
+                <p>Project Timeline</p>                
+                <Field type = "text" name="project_timeline" placeholder="timeline" />
+                <p>Project Assets</p>                
+                <Field type = "text" name="project_assets" placeholder="assets" />
+                <p>Founder's ID number</p>                
+                <Field type = "number" name="founders_id" placeholder="ID number" />
+                <Button style={{backgroundColor: "#011638", color: "white"}} content="Submit Your Project!" />
                 {newProject.length > 0 ? newProject.map(a=> <UpdatedForm projectList={a.project}/>) : null}
             </Form>
         </div>
