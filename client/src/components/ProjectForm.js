@@ -60,7 +60,7 @@ const FormikProjectForm = withFormik({
             funding_amount: funding_amount || "32,453",
             project_timeline: project_timeline || "Start 1/20/2019, Estimated finish: 2/2-/2019",
             project_assets: project_assets || "",
-            founders_id: founders_id || null
+            founders_id: founders_id || 1,
         };
     },
 
@@ -72,6 +72,7 @@ const FormikProjectForm = withFormik({
             console.log('formsubmitres: ', res)
             // resetForm();
             // setSubmitting(false);
+            // push to the user page and render new-project
         })
         .catch(err => {
             console.log('FormSubmiterr: ', err);

@@ -17,9 +17,9 @@ function App() {
     <div className="App">
       <Header />
       <Route path="/" exact component={Home} />
-      <Route path="/users" component={Users} />
+      <PrivateRoute path="/users" component={Users} />
       <Route path="/new-project" component={ProjectForm} />
-      <PrivateRoute path="/founders" component={Founders} />
+      <Route path="/founders" component={Founders} />
       <Route exact path='/signup' render={(props) => <SignUp {...props} />} />
       <Route exact path='/login' render={(props) => <Login {...props} />} />
 
