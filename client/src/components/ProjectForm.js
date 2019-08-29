@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { withFormik, Form, Field } from 'formik';
 import { axiosWithAuth } from "../utils/axiosWithAuth";
+import { Button } from "semantic-ui-react";
+
+import UpdatedForm from "./UpdatedForm";
 
 function ProjectForm(){
 
+    const [projectList, setProjectList] = useState([])
+    const [newProject, SetNewProject] = useState([])
+
+    useEffect(() => {
+        axiosWithAuth()
+        .get('https://vr-funding-app.herokuapp.com/api/projects/1')
+        .then(res => {
+            console.log(res)
+            SetNewProject(res.data.project)
+        })
+        .catch(err => console.log(err))
+    }, [])
+
     return(
         <div>
-            <Form>
+            <Form className="new-project-container">
+                <h2>Create a new project with us</h2>
                 <Field type = "text" name="image" placeholder="Image URL" />
                 <Field type = "text" name="project_title" placeholder="Project Title" />
                 <Field type = "text" name="project_type" placeholder="Project Type" />
@@ -16,7 +33,8 @@ function ProjectForm(){
                 <Field type = "text" name="project_timeline" placeholder="Project Timeline" />
                 <Field type = "text" name="project_assets" placeholder="Project assets" />
                 <Field type = "number" name="founders_id" placeholder="Founders ID" />
-                <button>Submit</button>
+                <Button color="blue" content="Submit Project!" />
+                {newProject.length > 0 ? newProject.map(a=> <UpdatedForm projectList={a.project}/>) : null}
             </Form>
         </div>
     );
@@ -33,10 +51,10 @@ const FormikProjectForm = withFormik({
             funding_amount: funding_amount || "32,453",
             project_timeline: project_timeline || "Start 1/20/2019, Estimated finish: 2/2-/2019",
             project_assets: project_assets || "",
-            founders_id: founders_id || 1
+            founders_id: founders_id || null
         };
     },
-    
+
     handleSubmit(values){
         console.log(values)
         axiosWithAuth()

@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import ProjectDetail from "./ProjectDetail";
 import { Button } from "semantic-ui-react";
 
-import dummyData from "../utils/dummyData"
 import axios from "axios";
+import { axiosWithAuth } from "../utils/axiosWithAuth";
 
 const Home = () => {
 
   const [projects, setProjects] = useState([])
+  const [user, setUser] = useState([])
 
   useEffect(() => {
     axios

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import PrivateRoute from "./utils/privateRoute";
 
 import Header from './components/Header';
 import Home from './components/Home';
@@ -18,9 +19,10 @@ function App() {
       <Route path="/" exact component={Home} />
       <Route path="/users" component={Users} />
       <Route path="/new-project" component={ProjectForm} />
-      <Route path="/founders" component={Founders} />
+      <PrivateRoute path="/founders" component={Founders} />
       <Route exact path='/signup' render={(props) => <SignUp {...props} />} />
       <Route exact path='/login' render={(props) => <Login {...props} />} />
+
     </div>
   );
 }
